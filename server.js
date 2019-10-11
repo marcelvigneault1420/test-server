@@ -7,6 +7,10 @@ require('dotenv').config();
 const slowRoute = require('./routes/slow');
 server.use('/slow', slowRoute);
 
+server.all('/', (req, res, next) => {
+    res.status(200).end('Welcome to my test server');
+});
+
 server.use((err, req, res, next) => console.log(err));
 server.use((req, res, next) =>
     res.status(404).json({ message: 'Route not found' })

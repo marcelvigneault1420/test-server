@@ -6,8 +6,10 @@ require('dotenv').config();
 
 const slowRoute = require('./routes/slow');
 const postsRoute = require('./routes/posts');
+const authorsRoute = require('./routes/authors');
 server.use('/slow', slowRoute);
 server.use('/posts', postsRoute);
+server.use('/authors', authorsRoute);
 
 server.all('/', (req, res, next) => {
     res.status(200).end('Welcome to my test server');

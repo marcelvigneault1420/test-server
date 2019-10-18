@@ -1,8 +1,11 @@
 const express = require('express');
 const server = express();
 const moment = require('moment');
+const cors = require('cors');
 
 require('dotenv').config();
+
+server.use(cors());
 
 const slowRoute = require('./routes/slow');
 const postsRoute = require('./routes/posts');

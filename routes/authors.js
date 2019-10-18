@@ -22,7 +22,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.get('/:id/posts', (req, res, next) => {
-    Post.getPostByAuthorId(req.params.id)
+    Post.getPostByAuthorId(req.params.id, req.body.page, req.body.nb)
         .then(result => {
             res.status(200).json({ posts: result });
         })

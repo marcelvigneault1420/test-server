@@ -5,7 +5,7 @@ const router = express.Router();
 const Post = require('./../database/models/Post');
 
 router.get('/', (req, res, next) => {
-    Post.getPosts()
+    Post.getPosts(req.body.page, req.body.nb)
         .then(result => {
             res.status(200).json({ posts: result });
         })

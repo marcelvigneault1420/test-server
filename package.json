@@ -8,7 +8,7 @@
         "build": "npm i && echo \"Build done\"",
         "start": "node server.js",
         "server": "nodemon server.js",
-	"deploy": "npm run build && node server.js"
+        "deploy": "npm run build && node server.js"
     },
     "repository": {
         "type": "git",

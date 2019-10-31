@@ -17,7 +17,7 @@ server.use('/posts', postsRoute);
 server.use('/authors', authorsRoute);
 
 server.all('/', (req, res, next) => {
-    res.status(200).end('Welcome to my test server');
+    res.status(200).end('Running...');
 });
 
 server.use((err, req, res, next) => {
